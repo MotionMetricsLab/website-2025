@@ -1,0 +1,51 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#heroGradient)"/>
+  
+  <!-- Motion analysis visualization -->
+  <g opacity="0.8">
+    <!-- Human figure silhouette -->
+    <path d="M200 100 Q210 90 220 100 L220 150 Q225 160 230 170 L225 200 Q220 220 215 240 L210 280 Q205 300 200 320 L195 280 Q190 300 185 320 L190 240 Q185 220 180 200 L175 170 Q180 160 185 150 L185 100 Q195 90 200 100 Z" fill="white" opacity="0.6"/>
+    
+    <!-- Motion tracking points -->
+    <circle cx="200" cy="100" r="3" fill="white"/>
+    <circle cx="185" cy="150" r="3" fill="white"/>
+    <circle cx="215" cy="150" r="3" fill="white"/>
+    <circle cx="180" cy="200" r="3" fill="white"/>
+    <circle cx="220" cy="200" r="3" fill="white"/>
+    <circle cx="185" cy="320" r="3" fill="white"/>
+    <circle cx="215" cy="320" r="3" fill="white"/>
+    
+    <!-- Motion trails -->
+    <path d="M180 200 Q160 180 140 160 Q120 140 100 120" stroke="white" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M220 200 Q240 180 260 160 Q280 140 300 120" stroke="white" stroke-width="2" fill="none" opacity="0.4"/>
+    
+    <!-- Data visualization elements -->
+    <g transform="translate(350, 50)">
+      <rect x="0" y="0" width="200" height="120" rx="8" fill="white" opacity="0.9"/>
+      <text x="10" y="20" font-family="Arial" font-size="12" fill="#333">Motion Analysis Data</text>
+      <line x1="10" y1="30" x2="190" y2="30" stroke="#667eea" stroke-width="1"/>
+      
+      <!-- Chart bars -->
+      <rect x="20" y="40" width="15" height="30" fill="#667eea"/>
+      <rect x="40" y="45" width="15" height="25" fill="#764ba2"/>
+      <rect x="60" y="35" width="15" height="35" fill="#667eea"/>
+      <rect x="80" y="50" width="15" height="20" fill="#764ba2"/>
+      
+      <!-- Metrics -->
+      <text x="10" y="85" font-family="Arial" font-size="10" fill="#666">Velocity: 2.4 m/s</text>
+      <text x="10" y="100" font-family="Arial" font-size="10" fill="#666">Cadence: 180 spm</text>
+    </g>
+  </g>
+  
+  <!-- Title -->
+  <text x="300" y="350" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="white">Motion Metrics Lab</text>
+  <text x="300" y="370" text-anchor="middle" font-family="Arial" font-size="12" fill="white" opacity="0.8">Advanced Movement Analysis</text>
+</svg>

@@ -1,0 +1,223 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`People - ${SITE_TITLE}`} description="Meet our team of experts in data science, sports science, and bioengineering" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="container">
+				<header class="page-header">
+					<h1>Research Staff</h1>
+					<p class="lead">Our team of PhD experts bringing together extensive experience across multiple disciplines</p>
+				</header>
+
+				<div class="team-grid">
+					<div class="team-member">
+						<div class="member-image">
+							<div class="placeholder-image">CH</div>
+						</div>
+						<div class="member-info">
+							<h3>Clint Hansen</h3>
+							<p class="role">CEO</p>
+							<p class="bio">My research focuses on understanding and characterizing the biomechanics of human movement, using theoretical frameworks and experimental studies. I am mainly interested in understanding the exploited motor strategies that help to explain the movements. The use of motion analysis combined with biomechanical protocols allows developing an understanding of how motor actions are planned and executed.</p>
+							
+							<div class="experience">
+								<h4>Experience</h4>
+								<ul>
+									<li><strong>Universitätskrankenhaus Schleswig-Holstein</strong> | Kiel, Germany<br>
+									Operations Project Lead & Deputy Working Group Leader, Neurogeriatrics | 07/2017–Present</li>
+									<li><strong>ASPETAR Hospital</strong> | Doha, Qatar<br>
+									Project Leader, Ligament Research | 03/2016–06/2017</li>
+									<li><strong>Nanyang Technological University</strong> | Singapore<br>
+									Research Associate | 08/2015–03/2016</li>
+								</ul>
+							</div>
+
+							<div class="education">
+								<h4>Education</h4>
+								<ul>
+									<li><strong>Paris-Sud University</strong> | Paris, France<br>
+									PhD in Human Movement Science (Distinction) | 10/2010 - 09/2013</li>
+								</ul>
+							</div>
+
+							<div class="journal-activities">
+								<h4>Journal Activities</h4>
+								<ul>
+									<li><strong>Sensors</strong> - Editor | 2018–Current</li>
+									<li><strong>Gait and Posture</strong> - Editor | 2022–Current</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="team-member">
+						<div class="member-image">
+							<div class="placeholder-image">RR</div>
+						</div>
+						<div class="member-info">
+							<h3>Robbin Romijnders</h3>
+							<p class="role">Algorithm Engineer</p>
+							<p class="bio">Robbin specializes in algorithm development and signal processing for movement analysis applications. His expertise lies in developing robust algorithms for gait analysis and movement disorder assessment.</p>
+							
+							<div class="education">
+								<h4>Education</h4>
+								<ul>
+									<li><strong>University of Kiel</strong> | Kiel, Schleswig-Holstein, Germany<br>
+									PhD Student (Electrical and Information Engineering), 2019–2023</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="team-member">
+						<div class="member-image">
+							<div class="placeholder-image">JW</div>
+						</div>
+						<div class="member-info">
+							<h3>Julius Welzel</h3>
+							<p class="role">Data Wizard</p>
+							<p class="bio">I am a Cognitive Neuroscientist with strong interest in movement and its disorders. My research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders. In particular, I am interested in combining useful clinical approaches and implementing modern software tools to facilitate the understanding of neurological disorders.</p>
+							
+							<p>I am a researcher who specializes in the field of movement disorders. Currently pursuing my PhD on the topic of "Oscillation in movement disorders". In the past I have been working on the influence of online multimodal feedback on tremor, and at the Neuropsychology Lab at the University of Oldenburg. Additionally, I am an experienced lecturer and tutor, having taught courses on biological psychology, Data Science and Computational Neuroscience at Kiel University and the University of Oldenburg.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+
+		<style>
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+
+			.page-header {
+				text-align: center;
+				padding: 3rem 0;
+				border-bottom: 1px solid #eee;
+				margin-bottom: 3rem;
+			}
+
+			.page-header h1 {
+				font-size: 3rem;
+				color: #333;
+				margin-bottom: 1rem;
+			}
+
+			.lead {
+				font-size: 1.25rem;
+				color: #666;
+				margin: 0;
+			}
+
+			.team-grid {
+				display: grid;
+				gap: 3rem;
+				margin-bottom: 3rem;
+			}
+
+			.team-member {
+				display: grid;
+				grid-template-columns: 200px 1fr;
+				gap: 2rem;
+				background: white;
+				padding: 2rem;
+				border-radius: 12px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+			}
+
+			.member-image {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+			}
+
+			.placeholder-image {
+				width: 150px;
+				height: 150px;
+				background: #667eea;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				font-size: 2rem;
+				font-weight: bold;
+			}
+
+			.member-info h3 {
+				color: #333;
+				font-size: 1.8rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.role {
+				color: #667eea;
+				font-weight: 600;
+				font-size: 1.1rem;
+				margin-bottom: 1rem;
+			}
+
+			.bio {
+				line-height: 1.6;
+				margin-bottom: 2rem;
+				color: #555;
+			}
+
+			.experience, .education, .journal-activities {
+				margin-bottom: 2rem;
+			}
+
+			.experience h4, .education h4, .journal-activities h4 {
+				color: #667eea;
+				margin-bottom: 1rem;
+				font-size: 1.2rem;
+			}
+
+			.experience ul, .education ul, .journal-activities ul {
+				list-style-type: none;
+				padding-left: 0;
+			}
+
+			.experience li, .education li, .journal-activities li {
+				margin-bottom: 1rem;
+				padding: 1rem;
+				background: #f8f9fa;
+				border-radius: 6px;
+				line-height: 1.5;
+			}
+
+			@media (max-width: 768px) {
+				.team-member {
+					grid-template-columns: 1fr;
+					text-align: center;
+				}
+
+				.page-header h1 {
+					font-size: 2rem;
+				}
+
+				.container {
+					padding: 0 1rem;
+				}
+
+				.placeholder-image {
+					width: 120px;
+					height: 120px;
+					font-size: 1.5rem;
+				}
+			}
+		</style>
+	</body>
+</html>

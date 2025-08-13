@@ -1,0 +1,249 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Services - ${SITE_TITLE}`} description="Comprehensive movement analysis services for clinical applications and sports performance" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="container">
+				<header class="page-header">
+					<h1>Services</h1>
+					<p class="lead">Comprehensive movement analysis solutions tailored to your needs</p>
+				</header>
+
+				<section class="service-category">
+					<h2>Individualized Solutions for Each Client</h2>
+					<p>We specialize in creating individualized solutions that seamlessly integrate, visualize, and analyze your data using state-of-the-art technology. Our approach ensures that each client receives tailored insights and strategies that drive success and innovation in their respective industries.</p>
+				</section>
+
+				<section class="service-category">
+					<h2>Clinical Movement Analysis Services</h2>
+					<p>Our clinical movement analysis services are designed to provide medical professionals with the critical information needed to diagnose, monitor, and treat a wide range of movement disorders. By utilizing the latest technologies and analytical techniques, we deliver precise and accurate data to support clinical decision-making.</p>
+				</section>
+
+				<section class="service-category">
+					<h2>Sports Performance Analysis Services</h2>
+					<p>Our sports performance analysis services aim to help athletes of all levels achieve their full potential. We employ cutting-edge technologies and analytical methods to provide precise and accurate data on factors such as running gait, jump mechanics, and more. This enables athletes to enhance their performance and reach new heights.</p>
+				</section>
+
+				<section class="modules">
+					<h2>Advanced Movement Analysis Modules for Everyone</h2>
+					<p>Our 3D movement analysis is an innovative solution utilizing cutting-edge technology to provide advanced assessments of your movement patterns in real-time. Using state-of-the-art motion capture technologies, we offer detailed evaluations for a wide range of activities, including walking, running, jumping, throwing, cycling, and golf swings.</p>
+					
+					<div class="modules-grid">
+						<div class="module">
+							<h3>Module 1: Joint and Segment Angle Determination (Kinematics)</h3>
+							<div class="module-details">
+								<p><strong>Duration:</strong> Approximately 45 minutes</p>
+								<p><strong>Price:</strong> 200 EUR</p>
+							</div>
+							<p>This module focuses on analyzing joint and segment angles, such as during walking or running. It includes detailed analysis of various joints like the hip, knee, ankle, and foot to identify abnormal movement patterns.</p>
+							
+							<h4>This package includes:</h4>
+							<ul>
+								<li>3D motion capture system for recording joint angles</li>
+								<li>Detailed analysis of joint angles during the gait cycle</li>
+								<li>Graphical representation of joint angles</li>
+								<li>Comparison of patient joint angles with normative data</li>
+								<li>Comprehensive report highlighting any abnormal movement patterns</li>
+							</ul>
+						</div>
+
+						<div class="module">
+							<h3>Module 2: Muscular Activity (EMG) in Sports Movements</h3>
+							<div class="module-details">
+								<p><strong>Duration:</strong> Approximately 60 minutes</p>
+								<p><strong>Price:</strong> 250 EUR</p>
+							</div>
+							<p>This module focuses on analyzing muscular activity, such as during walking or running. It includes a detailed analysis of muscles like glutes, quadriceps, hamstrings, and calves to assess activation patterns and identify any weaknesses or imbalances.</p>
+							
+							<h4>This package includes:</h4>
+							<ul>
+								<li>EMG sensors for recording muscle activity</li>
+								<li>Detailed analysis of muscle activation patterns during the gait cycle</li>
+								<li>Graphical representation of muscle activation patterns</li>
+								<li>Comparison of patient muscle activation with normative data</li>
+								<li>Comprehensive report highlighting weaknesses or imbalances</li>
+							</ul>
+						</div>
+
+						<div class="module">
+							<h3>Module 3: Joint and Segment Angles, EMG, and Pedography</h3>
+							<div class="module-details">
+								<p><strong>Duration:</strong> Approximately 90 minutes</p>
+								<p><strong>Price:</strong> 350 EUR</p>
+							</div>
+							<p>This module combines the previous two modules to analyze joint and muscle activity along with foot pressure distribution. The data collected helps evaluate balance and stability during activities such as walking or running.</p>
+							
+							<h4>This package includes:</h4>
+							<ul>
+								<li>3D motion capture system for recording joint angles</li>
+								<li>EMG sensors for recording muscle activity</li>
+								<li>Pedography system for recording foot pressure distribution</li>
+								<li>Detailed analysis of joint angles, muscle activation, and foot pressure distribution during the gait cycle</li>
+								<li>Graphical representation of joint angles, muscle activation, and foot pressure distribution</li>
+								<li>Comparison of patient data with normative data</li>
+								<li>Comprehensive report highlighting abnormal movement patterns, weaknesses, imbalances, and balance and stability issues</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="contact-info">
+						<p>For inquiries about customized offers, please contact us at <a href="mailto:info@motionmetrics.de">info@motionmetrics.de</a>.</p>
+					</div>
+				</section>
+			</div>
+		</main>
+		<Footer />
+
+		<style>
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+
+			.page-header {
+				text-align: center;
+				padding: 3rem 0;
+				border-bottom: 1px solid #eee;
+				margin-bottom: 3rem;
+			}
+
+			.page-header h1 {
+				font-size: 3rem;
+				color: #333;
+				margin-bottom: 1rem;
+			}
+
+			.lead {
+				font-size: 1.25rem;
+				color: #666;
+				margin: 0;
+			}
+
+			.service-category {
+				margin-bottom: 3rem;
+				padding: 2rem;
+				background: #f8f9fa;
+				border-radius: 8px;
+			}
+
+			.service-category h2 {
+				color: #667eea;
+				margin-bottom: 1rem;
+				font-size: 1.8rem;
+			}
+
+			.modules {
+				margin-top: 4rem;
+			}
+
+			.modules h2 {
+				text-align: center;
+				color: #333;
+				margin-bottom: 2rem;
+				font-size: 2.5rem;
+			}
+
+			.modules > p {
+				text-align: center;
+				margin-bottom: 3rem;
+				font-size: 1.1rem;
+				color: #666;
+			}
+
+			.modules-grid {
+				display: grid;
+				gap: 2rem;
+				margin-top: 3rem;
+			}
+
+			.module {
+				background: white;
+				padding: 2rem;
+				border-radius: 12px;
+				box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+				border-left: 4px solid #667eea;
+			}
+
+			.module h3 {
+				color: #667eea;
+				margin-bottom: 1rem;
+				font-size: 1.5rem;
+			}
+
+			.module-details {
+				background: #f0f4ff;
+				padding: 1rem;
+				border-radius: 6px;
+				margin: 1rem 0;
+			}
+
+			.module-details p {
+				margin: 0.5rem 0;
+				font-weight: 600;
+				color: #333;
+			}
+
+			.module h4 {
+				color: #333;
+				margin-top: 1.5rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.module ul {
+				list-style-type: none;
+				padding-left: 0;
+			}
+
+			.module li {
+				padding: 0.5rem 0;
+				border-bottom: 1px solid #eee;
+			}
+
+			.module li:before {
+				content: "✓";
+				color: #667eea;
+				font-weight: bold;
+				margin-right: 0.5rem;
+			}
+
+			.contact-info {
+				text-align: center;
+				margin-top: 3rem;
+				padding: 2rem;
+				background: #667eea;
+				color: white;
+				border-radius: 8px;
+			}
+
+			.contact-info a {
+				color: white;
+				text-decoration: underline;
+			}
+
+			@media (max-width: 768px) {
+				.page-header h1 {
+					font-size: 2rem;
+				}
+
+				.container {
+					padding: 0 1rem;
+				}
+
+				.module {
+					padding: 1.5rem;
+				}
+			}
+		</style>
+	</body>
+</html>
