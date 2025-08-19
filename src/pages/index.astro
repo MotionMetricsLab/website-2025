@@ -90,11 +90,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					</p>
 					
 					<div class="team-section">
-						<h3>Research Staff</h3>
+						<h3>Team</h3>
 						<div class="team-detailed-grid">
 							<div class="team-member-detailed">
 								<div class="member-image">
-									<div class="placeholder-image">CH</div>
+									<img src="src/team/Hansen_clint.jpg" alt="Clint Hansen" class="team-member-image">
 								</div>
 								<div class="member-info">
 									<h4>Clint Hansen</h4>
@@ -133,7 +133,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="team-member-detailed">
 								<div class="member-image">
-									<div class="placeholder-image">RR</div>
+									<img src="src/team/Romijnders_robbin.jpg" alt="Robbin Romijnders" class="team-member-image">
 								</div>
 								<div class="member-info">
 									<h4>Robbin Romijnders</h4>
@@ -154,15 +154,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="team-member-detailed">
 								<div class="member-image">
-									<div class="placeholder-image">JW</div>
+									<img src="src/team/Welzel_julius.jpg" alt="Julius Welzel" class="team-member-image">
 								</div>
 								<div class="member-info">
 									<h4>Julius Welzel</h4>
-									<p class="member-role">Data Wizard</p>
+									<p class="member-role">Data Scientist</p>
 									<p class="member-bio">I am a Cognitive Neuroscientist with strong interest in movement and its disorders. My research in systematic neuroscience focuses on developing novel methods to better understand and treat movement disorders. In particular, I am interested in combining useful clinical approaches and implementing modern software tools to facilitate the understanding of neurological disorders.</p>
-									
-									<p class="member-bio">I am a researcher who specializes in the field of movement disorders. Currently pursuing my PhD on the topic of "Oscillation in movement disorders". In the past I have been working on the influence of online multimodal feedback on tremor, and at the Neuropsychology Lab at the University of Oldenburg. Additionally, I am an experienced lecturer and tutor, having taught courses on biological psychology, Data Science and Computational Neuroscience at Kiel University and the University of Oldenburg.</p>
-								</div>
+									</div>
 							</div>
 						</div>
 					</div>
@@ -184,8 +182,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<blockquote>
 							<p>"The clinical gait analysis services helped us develop better rehabilitation protocols, significantly improving our patient outcomes."</p>
 							<cite>
-								<strong>Dr. Clinical Director</strong>
-								<span>Sports Medicine Center</span>
+								<strong>Clinical Director</strong>
+								<span>Medical Center</span>
 							</cite>
 						</blockquote>
 						<blockquote>
@@ -648,7 +646,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				for (const link of links) {
 					link.addEventListener('click', function(e) {
 						e.preventDefault();
-						const target = document.querySelector(this.getAttribute('href'));
+						const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+						const target = document.querySelector(href || '');
 						if (target) {
 							target.scrollIntoView({
 								behavior: 'smooth',
