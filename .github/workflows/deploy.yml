@@ -27,8 +27,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
         
-      - name: Install dependencies
-        run: npm ci
+      - name: Clean install with npm bug workaround
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
         
       - name: Build site
         run: npm run build
