@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://motionmetricslab.com',
-	base: '/',
+	site: 'https://motionmetricslab.github.io',
+	base: '/website-2025',
 	integrations: [mdx(), sitemap()],
 });
